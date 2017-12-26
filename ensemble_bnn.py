@@ -354,7 +354,7 @@ class BayesNN:  # Multi-Task leaning using Stocastic GD
             for s in xrange(0, self.subtasks):
                 [likelihood_pro[s],  trainfx[s, :], rmsetrain[s]] = self.likelihood_func(Netlist[s], y_train, w_pro[s, :netsize[s]], tau_pro)
 
-                [testfx[s, :],rmsetest[s]] = Netlist[s].test_proposal(w[s,:netsize[s]])
+                [testfx[s, :],rmsetest[s]] = Netlist[s].test_proposal(w_pro[s,:netsize[s]])
 
 
 
